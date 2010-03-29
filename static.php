@@ -1,6 +1,6 @@
 <?php
 include 'frame.php';
-$url_head = "http://61.129.115.240";
+$url_head = "http://admin.forbeschina.com";
 $types = array('news','index');
 $type = strtolower($_GET['type']);
 if(!in_array($type,$types)) die('invalid static type!'); 
