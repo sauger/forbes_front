@@ -178,8 +178,11 @@ function is_ajax(){
 
 function write_to_file($filename,$content,$mode='a'){
 	$fp = fopen($filename, $mode);
-	fwrite($fp,$content);
+	if(false === $fp) return false;
+	$r = fwrite($fp,$content);
 	fclose($fp);
+	if(false === $r) return false;
+	return true;
 }
 
 //work only with jquery frame work
