@@ -10,7 +10,7 @@
 <?php
 include 'frame.php';
 #$url_head = "http://admin.forbeschina.com";
-$url_head = "http://localhost";
+$url_head = "http://admin.forbeschina.com";
 $types = array('news','index');
 $type = strtolower($_GET['type']);
 
