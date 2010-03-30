@@ -31,7 +31,12 @@ function static_news($id) {
 		mkdir($dir);
 	}
 	$file = $dir ."/{$id}.html";
-	return write_to_file($file,$content,'w');
+	if(write_to_file($file,$content,'w')){
+		echo "<a href='{$dir}/{$id}.html'>查看</a>";
+		return true;
+	}else{
+		return false;
+	};
 }
 
 function static_index() {
